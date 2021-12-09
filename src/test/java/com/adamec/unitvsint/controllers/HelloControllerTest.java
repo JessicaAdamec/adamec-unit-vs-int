@@ -11,7 +11,6 @@ class HelloControllerTest {
 		HelloController controller = new HelloController(); //Arrange
 		String response = controller.hello("World"); 	//Act
 		assert("Hello, World".equals(response));	//Assert		
-	
 	}
 
 }
