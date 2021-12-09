@@ -23,5 +23,12 @@ class HelloControllerIntTest {
 		MvcResult result = mvc.perform(request).andReturn();
 		assert("Hello, World".equals(result.getResponse().getContentAsString()));	//Assert		
 	}
+	
+	@Test
+	public void testHelloWithName() throws Exception {
+		RequestBuilder request = MockMvcRequestBuilders.get("/hello?name=Jessica");
+		MvcResult result = mvc.perform(request).andReturn();
+		assert("Hello, Jessica".equals(result.getResponse().getContentAsString()));	//Assert
+	}
 
 }
